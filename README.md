@@ -31,6 +31,9 @@ contacts:	お問い合わせ主データ
 
 管理者: ログイン・一覧検索・詳細閲覧（モーダル）・削除・CSV出力
 
+<img width="904" height="427" alt="ユースケース図" src="https://github.com/user-attachments/assets/10da6967-cbab-4dbe-be01-82409ed98d05" />
+
+
 ＃URL
 
 Local URL: http://localhost/
