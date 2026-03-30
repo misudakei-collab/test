@@ -1,0 +1,61 @@
+.thanks__content {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    /* 画面の高さに合わせる */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* 背景の "Thank you" */
+.thanks__background {
+    position: absolute;
+    z-index: 1;
+}
+
+.thanks__background-text {
+    font-family: 'Inika', serif;
+    font-size: 160px;
+    /* 画像に合わせて大きめに設定 */
+    font-weight: 700;
+    color: #f6f6f6;
+    /* 非常に薄いグレー */
+    white-space: nowrap;
+    user-select: none;
+    /* テキスト選択不可にする */
+}
+
+/* 前面のメッセージエリア */
+.thanks__message {
+    position: relative;
+    z-index: 2;
+    /* 背景より前に出す */
+    text-align: center;
+}
+
+.thanks__message-text {
+    font-size: 18px;
+    color: #8b7969;
+    /* 落ち着いた茶色 */
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* HOMEボタン */
+.thanks__button-link {
+    display: inline-block;
+    background-color: #8b7969;
+    color: #fff;
+    padding: 12px 50px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.thanks__button-link:hover {
+    background-color: #a29182;
+}

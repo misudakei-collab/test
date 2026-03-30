@@ -1,0 +1,33 @@
+@startuml contact-app
+left to right direction
+skinparam packageStyle rectangle
+
+actor "一般ユーザー" as User
+actor "管理者" as Admin
+
+package "FashionablyLate お問い合わせシステム" {
+    usecase "お問い合わせ入力" as UC1
+    usecase "入力内容確認" as UC2
+    usecase "送信完了表示" as UC3
+
+    usecase "管理者登録" as UC4
+    usecase "ログイン" as UC5
+    usecase "お問い合わせ一覧閲覧・検索" as UC6
+    usecase "詳細表示・削除" as UC7
+    usecase "CSV出力" as UC8
+    usecase "ログアウト" as UC9
+}
+
+' 一般ユーザーの動き
+User --> UC1
+UC1 ..> UC2 : <<include>>
+UC2 ..> UC3 : <<include>>
+
+' 管理者の動き
+Admin --> UC4
+Admin --> UC5
+UC5 ..> UC6 : <<include>>
+Admin --> UC7
+Admin --> UC8
+Admin --> UC9
+@enduml

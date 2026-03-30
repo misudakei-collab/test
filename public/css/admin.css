@@ -1,0 +1,250 @@
+/* -----------------------------------------------------------
+    全体レイアウト & 共通設定
+----------------------------------------------------------- */
+.admin {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: "Garamond", "Zen Old Mincho", serif;
+}
+
+.admin__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.admin__heading h2 {
+    text-align: center;
+    color: #8b7969;
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* -----------------------------------------------------------
+    1. 検索フォーム (一行レイアウト)
+----------------------------------------------------------- */
+.search-form {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.search-form__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-keyword,
+.select-gender,
+.select-type,
+.input-date {
+    height: 45px;
+    border: 1px solid #e0dfde;
+    /* 四角い境界線 */
+    background-color: #fff;
+    color: #8b7969;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.input-keyword {
+    flex: 2;
+}
+
+.select-gender,
+.select-type,
+.input-date {
+    flex: 1;
+}
+
+.search-form__search-btn {
+    background-color: #827264;
+    color: #fff;
+    border: none;
+    padding: 0 35px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.search-form__reset-btn {
+    background-color: #f4f4f4;
+    color: #8b7969;
+    text-decoration: none;
+    padding: 0 25px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #e0dfde;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* -----------------------------------------------------------
+    2. ユーティリティ (エクスポートボタンを四角に！)
+----------------------------------------------------------- */
+.admin__utility {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+/* 🟢 修正：エクスポートを「四角いボタン」に */
+.export-button {
+    background-color: #f4f4f4;
+    /* 背景色 */
+    color: #8b7969;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 1px solid #e0dfde;
+    /* 四角い枠線 */
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination__item {
+    border: 1px solid #e0dfde;
+    margin-left: -1px;
+}
+
+/* 線を重ねて四角く */
+.pagination__item a,
+.pagination__item span {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #8b7969;
+    font-size: 14px;
+}
+
+.pagination__item.active {
+    background-color: #827264;
+    border-color: #827264;
+}
+
+.pagination__item.active span {
+    color: #fff;
+}
+
+/* -----------------------------------------------------------
+    3. テーブル (四角い線・格子状)
+----------------------------------------------------------- */
+/* 🟢 修正：テーブル全体に外枠と線を追加 */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0dfde;
+    /* 外枠の線 */
+}
+
+.admin-table__row--header {
+    background-color: #8b7969;
+    color: #fff;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 20px 15px;
+    border: 1px solid #e0dfde;
+    /* 🟢 ここで格子状の線を引いています */
+    text-align: left;
+}
+
+.admin-table td {
+    color: #333;
+    font-size: 15px;
+}
+
+/* 詳細ボタン */
+.detail-button {
+    background-color: #fff;
+    color: #8b7969;
+    border: 1px solid #e0dfde;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* -----------------------------------------------------------
+    4. モーダル (デザインそのまま)
+----------------------------------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__card {
+    background-color: #fff;
+    padding: 80px 100px;
+    width: 650px;
+    position: relative;
+    border: 1px solid #e0dfde;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #e0dfde;
+    background: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    color: #8b7969;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-list {
+    margin-bottom: 45px;
+}
+
+.modal-list__item {
+    display: flex;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.modal-list__label {
+    width: 200px;
+    font-weight: bold;
+    color: #8b7969;
+}
+
+.modal-list__content {
+    flex: 1;
+}
+
+.delete-form__button-container {
+    text-align: center;
+}
+
+.delete-form__button {
+    background-color: #d82b00;
+    color: #fff;
+    border: none;
+    padding: 12px 55px;
+    cursor: pointer;
+    font-size: 15px;
+}

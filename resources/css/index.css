@@ -1,0 +1,64 @@
+/* index.css */
+.contact-form {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.contact-form__heading h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.form__group {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.form__group-title {
+    width: 30%;
+    max-width: 250px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.form__group-title span {
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+.form__group-content {
+    width: 50%;
+}
+
+/* 入力欄の背景色とボーダーなしスタイル */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    background-color: #f4f4f4;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* 姓・名、電話番号の分割レイアウト */
+.form__input--name,
+.form__input--tel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 茶色のボタン */
+.form__button-submit {
+    display: block;
+    margin: 50px auto;
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 15px 60px;
+    cursor: pointer;
+}

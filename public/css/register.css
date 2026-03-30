@@ -1,0 +1,67 @@
+/* public/css/register.css */
+
+.register {
+    padding-top: 50px;
+}
+
+.register__inner {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.register__heading h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    color: #8b7969;
+    font-family: "Times New Roman", serif;
+    margin-bottom: 30px;
+}
+
+.register-form {
+    background-color: #fff;
+    padding: 60px 80px;
+    border: 1px solid #e0dfde;
+}
+
+.form__group {
+    margin-bottom: 25px;
+}
+
+.form__label {
+    margin-bottom: 5px;
+}
+
+.form__label--item {
+    font-size: 16px;
+    color: #8b7969;
+}
+
+.form__input--text input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form__error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form__button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form__button-submit {
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 16px;
+}

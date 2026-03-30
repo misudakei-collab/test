@@ -1,0 +1,100 @@
+.confirm__content {
+    margin: 0 auto;
+    padding: 60px 0;
+    max-width: 800px;
+    /* 画像に合わせて少し広めに */
+    background-color: #fff;
+}
+
+.confirm__heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.confirm__heading h2 {
+    font-family: 'Inika', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #8b7969;
+    /* タイトルの色 */
+}
+
+/* 確認テーブル */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+    /* 外枠グレー */
+    margin-bottom: 60px;
+}
+
+.confirm-table__row {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* ラベル部分（左側） */
+.confirm-table__header {
+    width: 30%;
+    text-align: center;
+    /* 中央寄せ */
+    padding: 25px;
+    background-color: #c2a696;
+    /* ラベルの背景色 */
+    color: #fff;
+    /* 白文字 */
+    font-weight: normal;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* テキスト部分（右側） */
+.confirm-table__text {
+    padding: 25px 30px;
+    color: #333;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* お問い合わせ内容（textarea）の高さ調整 */
+.confirm-table__row--textarea th,
+.confirm-table__row--textarea td {
+    vertical-align: top;
+    height: 120px;
+}
+
+/* ボタンエリア */
+.form__button {
+    text-align: center;
+}
+
+.form__button-submit {
+    display: inline-block;
+    background-color: #8b7969;
+    /* 送信ボタンの色 */
+    color: #fff;
+    padding: 12px 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 2px;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+}
+
+.form__button-submit:hover {
+    background-color: #a29182;
+}
+
+.form__button-back {
+    background: none;
+    border: none;
+    color: #c2a696;
+    /* 修正ボタンの色 */
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form__button-back:hover {
+    color: #8b7969;
+}

@@ -1,0 +1,38 @@
+@startuml contact-erd
+entity "users" {
+    + id [PK]
+    --
+    name
+    email
+    password
+    created_at
+    updated_at
+}
+
+entity "categories" {
+    + id [PK]
+    --
+    content
+    created_at
+    updated_at
+}
+
+entity "contacts" {
+    + id [PK]
+    --
+    # category_id [FK]
+    first_name
+    last_name
+    gender
+    email
+    tel
+    address
+    building
+    detail
+    created_at
+    updated_at
+}
+
+users ||--o{ contacts
+categories ||--o{ contacts
+@enduml

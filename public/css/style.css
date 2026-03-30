@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* =========================================
+   1. 共通スタイル（ベース・ヘッダー）
+   ========================================= */
+body {
+    margin: 0;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #333;
+}
+
+/* ヘッダー全体 */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0dfde;
+    height: 70px;
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* ロゴを中央へ */
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.header__logo {
+    font-size: 26px;
+    color: #8b7969;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-weight: normal;
+}
+
+/* ヘッダー右側のボタン */
+.header__nav {
+    position: absolute;
+    right: 20px;
+}
+
+.header__nav-btn {
+    background-color: #fff;
+    color: #8b7969;
+    border: 1px solid #e0dfde;
+    padding: 6px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.header__nav-btn:hover {
+    background-color: #f2ede9;
+}
+
+/* =========================================
+   2. 認証画面（Login / Register）
+   ========================================= */
+/* 背景をベージュにするためのクラス */
+.auth-page {
+    background-color: #f2ede9;
+    min-height: 100vh;
+}
+
+.auth__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.auth__heading h2 {
+    color: #8b7969;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* 白いカード部分 */
+.auth-form {
+    background-color: #fff;
+    width: 600px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+}
+
+/* 入力グループ（縦並び） */
+.auth-form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.auth-form__label {
+    color: #8b7969;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f4;
+    border: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* エラーメッセージ */
+.auth-form__error {
+    color: #ff0000;
+    font-size: 13px;
+    margin-top: 5px;
+    height: 15px;
+}
+
+/* 登録・ログインボタン（中央寄せ） */
+.auth-form__btn {
+    display: block;
+    width: 120px;
+    margin: 30px auto 0;
+    background-color: #827161;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* =========================================
+   3. 管理画面（Admin）
+   ========================================= */
+.admin-page {
+    background-color: #fff;
+}
+
+.admin__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.admin__heading h2 {
+    color: #8b7969;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+/* 検索フォーム */
+.search-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-form__item {
+    flex: 1;
+}
+
+.search-form__item input,
+.search-form__item select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e0dfde;
+    padding: 0 15px;
+    color: #8b7969;
+    box-sizing: border-box;
+}
+
+/* 検索・リセットボタン */
+.search-form__btn {
+    background-color: #827161;
+    color: #fff;
+    border: none;
+    padding: 0 40px;
+    cursor: pointer;
+}
+
+.search-form__reset {
+    background-color: #f2ede9;
+    color: #8b7969;
+    border: none;
+    padding: 12px 40px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* テーブル */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table__header {
+    background-color: #8b7969;
+    color: #fff;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0dfde;
+}
+
+/* style.css に追記：デザインを絶対動かさないための補強 */
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    max-width: 1200px;
+    margin: 0 auto 15px;
+}
+
+.btn-export {
+    background-color: #f2ede9;
+    /* ベージュ */
+    color: #8b7969;
+    /* 茶色文字 */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 50px;
+    color: #8b7969;
+}
+
+/* 管理画面のユーティリティボタン */
+.export-button {
+    background-color: #f2ede9;
+    /* 薄いベージュ */
+    color: #8b7969;
+    /* 茶色文字 */
+    padding: 7px 20px;
+    text-decoration: none;
+    border: 1px solid #e0dfde;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.export-button:hover {
+    background-color: #eaddd3;
+}

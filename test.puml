@@ -1,0 +1,4 @@
+@startuml
+User -> App: 接続テスト
+App --> User: 成功！
+@enduml

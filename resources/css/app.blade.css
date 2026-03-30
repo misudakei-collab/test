@@ -1,0 +1,46 @@
+/* common.css または app.blade.php 内 */
+:root {
+    --main-color: #8b7969;
+    /* ボタンやロゴの茶色 */
+    --bg-color: #f2ede9;
+    /* 背景の薄いベージュ */
+    --accent-color: #e0dfde;
+    /* 入力欄などの薄いグレー */
+}
+
+body {
+    background-color: #fff;
+    font-family: "Times New Roman", "游明朝", serif;
+    color: #8b7969;
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.header-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #8b7969;
+    text-decoration: none;
+}
+
+.header-nav {
+    position: absolute;
+    right: 50px;
+}
+
+/* ヘッダー右の枠線ボタン（login/register/logout） */
+.nav-btn {
+    border: 1px solid #f2ede9;
+    padding: 5px 15px;
+    color: #f2ede9;
+    text-decoration: none;
+    font-size: 14px;
+}

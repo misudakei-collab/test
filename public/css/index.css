@@ -1,0 +1,149 @@
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.contact-form__heading h2 {
+    text-align: center;
+    color: var(--main-brown);
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ラベルと入力欄を2列に */
+.form__group {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.form__group-title {
+    width: 30%;
+    /* ラベル側の幅を固定 */
+    padding-top: 10px;
+}
+
+.form__label--item {
+    color: var(--main-brown);
+    font-size: 16px;
+}
+
+.form__label--required {
+    color: #ff4d4d;
+    margin-left: 5px;
+}
+
+.form__group-content {
+    width: 70%;
+}
+
+/* 入力欄の共通スタイル */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0dfde;
+    background-color: #f4f4f4;
+    /* 薄いグレー背景 */
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* 名前と電話番号の分割配置 */
+.form__input--name,
+.form__input--tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__input--name input {
+    width: 48%;
+}
+
+.form__input--tel input {
+    width: 30%;
+}
+
+.form__input--radio {
+    padding-top: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.form__input--radio input {
+    accent-color: var(--main-brown);
+    /* ラジオボタンの色を茶色に */
+}
+
+.form__input--textarea textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form__error {
+    color: #ff4d4d;
+    font-size: 12px;
+    height: 15px;
+    margin-top: 3px;
+}
+
+/* ボタン */
+.form__button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form__button-submit {
+    width: 160px;
+    height: 45px;
+    background-color: var(--main-brown);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* --- ボタンエリアの修正 --- */
+.form__button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* ボタンを中央に配置 */
+    width: 100%;
+}
+
+.form__button-submit {
+    width: 160px;
+    /* 画像に基づいたサイズ */
+    height: 45px;
+    background-color: #8b7969;
+    /* お手本の茶色 */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+    transition: opacity 0.3s;
+}
+
+.form__button-submit:hover {
+    opacity: 0.8;
+}

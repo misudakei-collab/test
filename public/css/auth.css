@@ -1,0 +1,157 @@
+:root {
+    --main-brown: #8b7969;
+    --light-beige: #f2ede9;
+    --border-gray: #e0dfde;
+    --input-bg: #f4f4f4;
+    --body-bg: #f2ede9;
+    /* 背景は薄いベージュ */
+}
+
+body {
+    background-color: var(--body-bg);
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+/* ヘッダーの設定（FashionablyLateを中央、registerを右端に） */
+.header {
+    background-color: #fff;
+    height: 70px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ロゴを中央へ */
+    position: relative;
+}
+
+.header-logo {
+    color: var(--main-brown);
+    font-size: 26px;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-weight: normal;
+}
+
+.header-button {
+    position: absolute;
+    right: 40px;
+    /* 右端に配置 */
+    border: 1px solid var(--border-gray);
+    padding: 5px 20px;
+    color: var(--main-brown);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* コンテンツエリア全体 */
+.auth-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    /* 上の余白 */
+}
+
+/* タイトル (Login) */
+.auth-heading h2 {
+    color: var(--main-brown);
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+/* 白いカード部分 */
+.auth-form-card {
+    background-color: #fff;
+    width: 600px;
+    /* お手本のサイズ感 */
+    padding: 60px 80px;
+    /* 内部の余白 */
+    box-sizing: border-box;
+    /* 枠線が不要ならborder: none; にしてください */
+    border: 1px solid var(--border-gray);
+}
+
+/* フォーム全体のレイアウト（縦並びにするためflex-directionを変更） */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* 各入力項目間の余白 */
+}
+
+/* 各入力グループ（ラベル＋入力欄） */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* ラベルを入力欄の上に配置（縦並び） */
+    align-items: flex-start;
+    /* すべて左揃え */
+    width: 100%;
+}
+
+/* ラベル（入力欄の上に来る文字） */
+.form-label {
+    margin-bottom: 8px;
+    /* ラベルと入力欄の間の隙間 */
+}
+
+.form-label-item {
+    color: var(--main-brown);
+    font-size: 16px;
+    font-weight: normal;
+    /* 画像のように細身にする */
+}
+
+/* 入力欄全体 */
+.form-input-container {
+    width: 100%;
+}
+
+.form-input-text input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: none;
+    /* 枠線を消す */
+    background-color: var(--input-bg);
+    /* グレーの背景 */
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* エラーメッセージ（赤色） */
+.form-error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ボタンエリア（中央寄せ） */
+.form-button {
+    text-align: center;
+    /* これでボタンをカードの中央に配置 */
+    margin-top: 30px;
+}
+
+.form-button-submit {
+    background-color: var(--main-brown);
+    /* 茶色のボタン */
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.form-button-submit:hover {
+    opacity: 0.8;
+}
