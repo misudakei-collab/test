@@ -23,7 +23,7 @@ users:	        管理者情報;
 categories:	お問い合わせ種別;	
 contacts:	お問い合わせ主データ
 
-ER図.png
+<img width="252" height="474" alt="ER図" src="https://github.com/user-attachments/assets/19ad0505-95be-4b4b-a35b-6c5b2e3e8e22" />
 
 ユースケース
 
