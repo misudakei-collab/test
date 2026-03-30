@@ -4,24 +4,24 @@ FashionablyLate お問い合わせ管理システム（仮）
 
 ＃＃環境構築
 
-Docker: docker-compose up -d
+-Docker: docker-compose up -d
 
-Migration & Seeding: php artisan migrate --seed
+-Migration & Seeding: php artisan migrate --seed
 
 
 ＃＃使用技術（実行環境）
 
-Language	PHP 8.5.3	
-Framework	Laravel 13.1.1	
-Database	SQLite	
-Web Server	Localhost	
-Frontend	HTML5 / CSS3		
+Language:	PHP 8.5.3	
+Framework:	Laravel 13.1.1	
+Database:	SQLite	
+Web Server:	Localhost	
+Frontend:	HTML5 / CSS3		
 
 ＃＃ER図
 
-users	        管理者情報	
-categories	お問い合わせ種別	
-contacts	お問い合わせ主データ
+users:	        管理者情報	
+categories:	お問い合わせ種別	
+contacts:	お問い合わせ主データ
 
 ユースケース
 
