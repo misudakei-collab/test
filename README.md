@@ -35,39 +35,5 @@ Local URL: http://localhost/
 お問い合わせフォーム入力ページ：http://localhost/
 ログインページ：http://localhost/login
 ユーザ登録ページ：http://localhost/register＃アプリケーション名
-
-FashionablyLate お問い合わせ管理システム（仮）
-
-＃＃環境構築
-
-Docker: docker-compose up -d
-
-Migration & Seeding: php artisan migrate --seed
-
-
-＃＃使用技術（実行環境）
-
-Language	PHP 8.5.3	
-Framework	Laravel 13.1.1	
-Database	SQLite	
-Web Server	Localhost	
-Frontend	HTML5 / CSS3		
-
-＃＃ER図
-
-users	        管理者情報	
-categories	お問い合わせ種別	
-contacts	お問い合わせ主データ
-
-ユースケース
-
-一般ユーザー: お問い合わせの入力・確認・送信
-
-管理者: ログイン・一覧検索・詳細閲覧（モーダル）・削除・CSV出力
-
-＃URL
-
-Local URL: http://localhost/
-お問い合わせフォーム入力ページ：http://localhost/
 ログインページ：http://localhost/login
 ユーザ登録ページ：http://localhost/register
