@@ -24,7 +24,6 @@
                     </ul>
                 </div>
             @endif
-
             {{-- メールアドレス --}}
             <div class="form-group">
                 <div class="form-label">
