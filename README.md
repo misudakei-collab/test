@@ -1,29 +1,29 @@
-＃アプリケーション名
+# 1.アプリケーション名
 
 FashionablyLate お問い合わせ管理システム（仮）
 
-＃＃環境構築
+# 2.環境構築
 
 
-# 1. リポジトリのクローン
+# リポジトリのクローン
 git clone git@github.com:misudakei-collab/test.git
 cd test
 
-# 2. Dockerコンテナの起動
+# Dockerコンテナの起動
 ./vendor/bin/sail up -d
 
-# 3. 依存パッケージのインストール
+# 依存パッケージのインストール
 ./vendor/bin/sail composer install
 
-# 4. 環境設定ファイルの準備
+# 環境設定ファイルの準備
 cp .env.example .env
 ./vendor/bin/sail artisan key:generate
 
-# 5. マイグレーション & シーディング（DB構築）
+# マイグレーション & シーディング（DB構築）
 ./vendor/bin/sail artisan migrate --seed
 
 
-# 6.使用技術（実行環境）
+# 3.使用技術（実行環境）
 
 Language:	PHP 8.5.3;	
 
@@ -36,7 +36,7 @@ Infrastructure: Docker / Laravel Sail
 Frontend:	HTML5 / CSS3　（BLADE)	
 
 
-# 7.ER図
+# 4.ER図
 
 users: 管理者情報（ログイン認証用）
 
@@ -49,31 +49,31 @@ contacts: お問い合わせ主データ（氏名、メール、内容など）
 
 
 
-# 8.ユースケース
+# 5.ユースケース
 
 
-一般ユーザー
-お問い合わせフォーム入力
+# 一般ユーザー
+お問い合わせフォーム入力;
 
-入力内容の確認画面
+入力内容の確認画面;
 
-送信完了メッセージ（サンクスページ）
+送信完了メッセージ（サンクスページ）;
 
-管理者
-ログイン・ログアウト機能
+# 管理者
+ログイン・ログアウト機能;
 
-お問い合わせ一覧表示・詳細閲覧（モーダル）
+お問い合わせ一覧表示・詳細閲覧（モーダル）;
 
-検索機能（名前、性別、お問い合わせ種別、キーワード）
+検索機能（名前、性別、お問い合わせ種別、キーワード）;
 
-データ削除機能
+データ削除機能;
 
-CSV出力機能
+CSV出力機能;
 
 <img width="904" height="427" alt="ユースケース図" src="https://github.com/user-attachments/assets/10da6967-cbab-4dbe-be01-82409ed98d05" />
 
 
-# 9.URL
+# 6.URL
 
 
 お問い合わせフォーム: http://localhost/
