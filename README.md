@@ -1,34 +1,34 @@
-# 1.アプリケーション名
+# アプリケーション名
 
 FashionablyLate お問い合わせ管理システム（仮）
 
-# 2.環境構築
+# 環境構築
 
 
- -リポジトリのクローン:
+## リポジトリのクローン:
 
 git clone git@github.com:misudakei-collab/test.git
 cd test
 
- -Dockerコンテナの起動:
+## Dockerコンテナの起動:
 
 ./vendor/bin/sail up -d
 
- -依存パッケージのインストール:
+## 依存パッケージのインストール:
  
 ./vendor/bin/sail composer install
 
- -環境設定ファイルの準備:
+## 環境設定ファイルの準備:
  
 cp .env.example .env
 ./vendor/bin/sail artisan key:generate
 
- -マイグレーション & シーディング（DB構築）:
+## マイグレーション & シーディング（DB構築）:
  
 ./vendor/bin/sail artisan migrate --seed
 
 
-# 3.使用技術（実行環境）
+# 使用技術（実行環境）
 
 Language:	PHP 8.5.3;	
 
@@ -41,7 +41,7 @@ Infrastructure: Docker / Laravel Sail
 Frontend:	HTML5 / CSS3　（BLADE)	
 
 
-# 4.ER図
+# ER図
 
 users: 管理者情報（ログイン認証用）
 
@@ -54,10 +54,10 @@ contacts: お問い合わせ主データ（氏名、メール、内容など）
 
 
 
-# 5.ユースケース
+# ユースケース
 
 
- -一般ユーザー:
+## 一般ユーザー:
  
 お問い合わせフォーム入力;
 
@@ -65,7 +65,7 @@ contacts: お問い合わせ主データ（氏名、メール、内容など）
 
 送信完了メッセージ（サンクスページ）;
 
- -管理者:
+## 管理者:
  
 ログイン・ログアウト機能;
 
@@ -80,7 +80,7 @@ CSV出力機能;
 <img width="904" height="427" alt="ユースケース図" src="https://github.com/user-attachments/assets/10da6967-cbab-4dbe-be01-82409ed98d05" />
 
 
-# 6.URL
+# URL
 
 
 お問い合わせフォーム: http://localhost/
