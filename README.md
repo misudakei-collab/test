@@ -1,8 +1,10 @@
 ＃アプリケーション名
 
+
 FashionablyLate お問い合わせ管理システム（仮）
 
 ＃＃環境構築
+
 
 -Docker: docker-compose up -d;
 
@@ -13,11 +15,13 @@ FashionablyLate お問い合わせ管理システム（仮）
 
 ＃＃使用技術（実行環境）
 
+
 Language:	PHP 8.5.3;	
 Framework:	Laravel 13.1.1;	
 Database:	SQLite;	
 Web Server:	Localhost;	
-Frontend:	HTML5 / CSS3		
+Frontend:	HTML5 / CSS3	
+
 
 ＃＃ER図
 
@@ -27,7 +31,10 @@ contacts:	お問い合わせ主データ
 
 <img width="252" height="474" alt="ER図" src="https://github.com/user-attachments/assets/19ad0505-95be-4b4b-a35b-6c5b2e3e8e22" />
 
+
+
 ユースケース
+
 
 一般ユーザー: お問い合わせの入力・確認・送信
 
@@ -37,6 +44,7 @@ contacts:	お問い合わせ主データ
 
 
 ＃URL
+
 
 Local URL: http://localhost/
 お問い合わせフォーム入力ページ：http://localhost/
