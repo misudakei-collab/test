@@ -5,7 +5,7 @@ FashionablyLate お問い合わせ管理システム（仮）
 ＃＃環境構築
 
 -Docker: docker-compose up -d;
-
+-git clone git@github.com:misudakei-collab/test.git
 -Migration & Seeding: php artisan migrate --seed
 
 
