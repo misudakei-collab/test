@@ -1,6 +1,5 @@
 ＃アプリケーション名
 
-
 FashionablyLate お問い合わせ管理システム（仮）
 
 ＃＃環境構築
@@ -15,19 +14,25 @@ FashionablyLate お問い合わせ管理システム（仮）
 
 ＃＃使用技術（実行環境）
 
-
 Language:	PHP 8.5.3;	
+
 Framework:	Laravel 13.1.1;	
+
 Database:	SQLite;	
+
 Web Server:	Localhost;	
+
 Frontend:	HTML5 / CSS3	
 
 
 ＃＃ER図
 
 users:	        管理者情報;	
+
 categories:	お問い合わせ種別;	
+
 contacts:	お問い合わせ主データ
+
 
 <img width="252" height="474" alt="ER図" src="https://github.com/user-attachments/assets/19ad0505-95be-4b4b-a35b-6c5b2e3e8e22" />
 
