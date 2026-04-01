@@ -23,7 +23,7 @@ cp .env.example .env
 ./vendor/bin/sail artisan migrate --seed
 
 
-＃＃使用技術（実行環境）
+# 6.使用技術（実行環境）
 
 Language:	PHP 8.5.3;	
 
@@ -36,7 +36,7 @@ Infrastructure: Docker / Laravel Sail
 Frontend:	HTML5 / CSS3　（BLADE)	
 
 
-＃＃ER図
+# 7.ER図
 
 users: 管理者情報（ログイン認証用）
 
@@ -49,7 +49,7 @@ contacts: お問い合わせ主データ（氏名、メール、内容など）
 
 
 
-ユースケース
+# 8.ユースケース
 
 
 一般ユーザー
@@ -73,7 +73,7 @@ CSV出力機能
 <img width="904" height="427" alt="ユースケース図" src="https://github.com/user-attachments/assets/10da6967-cbab-4dbe-be01-82409ed98d05" />
 
 
-＃URL
+# 9.URL
 
 
 お問い合わせフォーム: http://localhost/
