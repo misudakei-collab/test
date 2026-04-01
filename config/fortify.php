@@ -157,8 +157,8 @@ return [
     ],
 
     'redirects' => [
-        'login' => '/admin/inquiries',    // ★ここを '/' から '/admin/inquiries' に変更
-        'register' => '/admin/inquiries', // ★ここを '/' から '/admin/inquiries' に変更
+        'login' => '/admin/inquiries',   
+        'register' => '/admin/inquiries', 
         'logout' => '/login',
         'password-confirmation' => '/',
         'password-update' => '/',
