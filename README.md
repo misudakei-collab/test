@@ -5,7 +5,7 @@ FashionablyLate お問い合わせ管理システム（仮）
 # 2.環境構築
 
 
- -リポジトリのクローン
+ -リポジトリのクローン:
 
 git clone git@github.com:misudakei-collab/test.git
 cd test
