@@ -8,42 +8,41 @@ FashionablyLate お問い合わせ管理システム（仮）
 ### 1.リポジトリのクローン:
 
 ```bash
-
 git clone git@github.com:misudakei-collab/test.git
 cd test
+` ``
 
 ### 2.依存パッケージのインストール (重要):
 ※Sailを起動する前に、まずローカルでcomposerを実行する必要があります。
 
 ```bash
-
 composer install
+` ``
 
 ### 3.依存パッケージのインストール:
 
 ```bash
-
 ./vendor/bin/sail composer install
+` ``
 
 ### 4.環境設定ファイルの準備:
  
 ```bash
-
 cp .env.example .env
 php artisan key:generate
+` ``
 
 ### 5.Dockerコンテナの起動:
 
 ```bash
-
 ./vendor/bin/sail up -d
+` ``
 
 ### 6.データベースのマイグレーション & シーディング:
 
 ```bash
-
 ./vendor/bin/sail artisan migrate --seed
-
+` ``
 
 # 使用技術（実行環境）
 
