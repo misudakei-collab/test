@@ -1,58 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# アプリケーション名
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+FashionablyLate お問い合わせ管理システム（仮）
 
-## About Laravel
+# 環境構築
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### リポジトリのクローン:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+git clone git@github.com:misudakei-collab/test.git
+cd test
 
-## Learning Laravel
+### Dockerコンテナの起動:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+./vendor/bin/sail up -d
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 依存パッケージのインストール:
+ 
+./vendor/bin/sail composer install
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### 環境設定ファイルの準備:
+ 
+cp .env.example .env
+./vendor/bin/sail artisan key:generate
 
-## Agentic Development
+### マイグレーション & シーディング（DB構築）:
+ 
+./vendor/bin/sail artisan migrate --seed
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
 
-```bash
-composer require laravel/boost --dev
+# 使用技術（実行環境）
 
-php artisan boost:install
-```
+Language:	PHP 8.5.3;	
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Framework:	Laravel 13.1.1;	
 
-## Contributing
+Database:	SQLite;	
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Infrastructure: Docker / Laravel Sail
 
-## Code of Conduct
+Frontend:	HTML5 / CSS3　（BLADE)	
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+# ER図
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+users: 管理者情報（ログイン認証用）
 
-## License
+categories: お問い合わせ種別（「商品について」「その他」など）
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+contacts: お問い合わせ主データ（氏名、メール、内容など）
+
+
+<img width="252" height="474" alt="ER図" src="https://github.com/user-attachments/assets/19ad0505-95be-4b4b-a35b-6c5b2e3e8e22" />
+
+
+
+# ユースケース
+
+
+### 一般ユーザー:
+ 
+お問い合わせフォーム入力;
+
+入力内容の確認画面;
+
+送信完了メッセージ（サンクスページ）;
+
+### 管理者:
+ 
+ログイン・ログアウト機能;
+
+お問い合わせ一覧表示・詳細閲覧（モーダル）;
+
+検索機能（名前、性別、お問い合わせ種別、キーワード）;
+
+データ削除機能;
+
+CSV出力機能;
+
+<img width="904" height="427" alt="ユースケース図" src="https://github.com/user-attachments/assets/10da6967-cbab-4dbe-be01-82409ed98d05" />
+
+
+# URL
+
+
+お問い合わせフォーム: http://localhost/
+
+ログインページ: http://localhost/login
+
+ユーザー登録ページ: http://localhost/register

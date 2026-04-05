@@ -31,8 +31,7 @@ class CreateNewUser implements CreatesNewUsers
             'password' => [
                 'required',
                 'string',
-                // 'confirmed', // ★ この行をコメントアウトまたは削除します
-                'min:8', // 必要に応じて最小文字数なども調整してください
+                'min:8', 
             ],
         ])->validate();
 
