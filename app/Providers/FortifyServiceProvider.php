@@ -29,21 +29,12 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // ★ ここから追記：自作したビューをFortifyに登録 ★
-        Fortify::loginView(function () {
-            return view('auth.login');
-        });
-
-        Fortify::registerView(function () {
-            return view('auth.register');
-        });
-        // ★ 追記ここまで ★
-
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
         Fortify::redirectUserForTwoFactorAuthenticationUsing(RedirectIfTwoFactorAuthenticatable::class);
+        \Laravel\Fortify\Fortify::createUsersUsing(\App\Actions\Fortify\CreateNewUser::class);
 
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
