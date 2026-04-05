@@ -5,26 +5,36 @@ FashionablyLate お問い合わせ管理システム（仮）
 # 環境構築
 
 
-### リポジトリのクローン:
+### 1.リポジトリのクローン:
 
+Bash
 git clone git@github.com:misudakei-collab/test.git
 cd test
 
-### Dockerコンテナの起動:
+### 2.依存パッケージのインストール (重要):
+※Sailを起動する前に、まずローカルでcomposerを実行する必要があります。
 
-./vendor/bin/sail up -d
+Bash
+composer install
 
-### 依存パッケージのインストール:
+### 3.依存パッケージのインストール:
  
 ./vendor/bin/sail composer install
 
-### 環境設定ファイルの準備:
+### 4.環境設定ファイルの準備:
  
+Bash
 cp .env.example .env
-./vendor/bin/sail artisan key:generate
+php artisan key:generate
 
-### マイグレーション & シーディング（DB構築）:
- 
+### 5.Dockerコンテナの起動:
+
+Bash
+./vendor/bin/sail up -d
+
+### 6.データベースのマイグレーション & シーディング:
+
+Bash
 ./vendor/bin/sail artisan migrate --seed
 
 
@@ -88,3 +98,5 @@ CSV出力機能;
 ログインページ: http://localhost/login
 
 ユーザー登録ページ: http://localhost/register
+
+管理画面（お問い合わせ一覧）: http://localhost/admin/inquiries
